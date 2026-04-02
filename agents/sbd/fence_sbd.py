@@ -356,6 +356,17 @@ Comma separated list of sbd devices",
         "order": 200
         }
 
+    all_opt["status_quorate"] = {
+        # once pacemaker supports degraded status of a fencing resource
+        # we we would per default report good status on all devices OK
+        # and degraded status on just a quarate number of devices OK.
+        "getopt" : ":",
+        "longopt" : "good-status-on-quorate",
+        "help" : "--good-status-on-quorate       Signal Good status as long as quorate number of devices is OK",
+        "required" : "0",
+        "order": 201
+    }
+
 def main():
     """Main function
     """
